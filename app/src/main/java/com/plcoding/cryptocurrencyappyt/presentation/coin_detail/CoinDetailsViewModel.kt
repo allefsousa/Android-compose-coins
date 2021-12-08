@@ -9,10 +9,12 @@ import com.plcoding.cryptocurrencyappyt.common.Constants
 import com.plcoding.cryptocurrencyappyt.common.Resource
 import com.plcoding.cryptocurrencyappyt.domain.use_case.get_coin.GetCoinUseCase
 import com.plcoding.cryptocurrencyappyt.domain.use_case.get_coins.GetCoinsUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
 
+@HiltViewModel
 class CoinDetailsViewModel @Inject constructor(
     private val getCoinUseCase: GetCoinUseCase,
     private val savedSateHandler:SavedStateHandle
